@@ -1,21 +1,15 @@
 # _*_ coding: utf-8 _*_
-import sys
+
+import logging
 
 from telebot import TeleBot
 from vk_api import VkApi, longpoll as vk_longpoll
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
-import logging
-
+log_format = '%(asctime)s [%(filename)s:%(lineno)d] [%(levelname)s] %(name)s: "%(message)s"'
+logging.basicConfig(format=log_format, level=logging.WARNING)
 logger = logging.getLogger('Vk2Tg')
-formatter = logging.Formatter(
-    '%(asctime)s [%(filename)s:%(lineno)d %(threadName)s] [%(levelname)s] %(name)s: "%(message)s"'
-)
-console_output_handler = logging.StreamHandler(sys.stderr)
-console_output_handler.setFormatter(formatter)
-logger.addHandler(console_output_handler)
-logger.setLevel(logging.DEBUG)
 
 
 class Vk2Tg:

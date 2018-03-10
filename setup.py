@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from os.path import join, dirname
-
-from setuptools import setup, find_packages
+import pypandoc
+from setuptools import setup
 
 import vk2tg
 
@@ -13,10 +12,10 @@ setup(
     author_email='bekbulatov.ramzan@ya.ru',
     url='https://github.com/uburuntu/vk2tg',
     description='Integration vk with Telegram',
-    long_description=open(join(dirname(__file__), 'readme.rst')).read(),
+    long_description=pypandoc.convert_file('readme.md', 'rst', format='markdown_github'),
     download_url='https://github.com/uburuntu/vk2tg/archive/master.zip',
     license='GNU General Public License v3.0, see LICENSE file',
 
-    packages=find_packages(),
-    install_requires=['requests', 'vk_api', 'pyTelegramBotAPI']
+    packages=['vk2tg'],
+    install_requires=['vk_api', 'pyTelegramBotAPI']
 )
