@@ -18,3 +18,6 @@ tg_token = os.getenv('VK2TG_TELEGRAM_BOT_TOKEN', default_tg_token)
 
 default_vk_token = ""
 vk_token = os.getenv('VK2TG_VK_API_TOKEN', default_vk_token)
+
+default_test_chat_id = ""
+test_chat_id = os.getenv('VK2TG_TELEGRAM_TEST_CHAT_ID', default_test_chat_id)

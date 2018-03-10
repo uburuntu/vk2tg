@@ -4,9 +4,11 @@ from os.path import join, dirname
 
 from setuptools import setup, find_packages
 
+import vk2tg
+
 setup(
     name='vk2tg',
-    version='0.1',
+    version=vk2tg.__version__,
     author='uburuntu',
     author_email='bekbulatov.ramzan@ya.ru',
     url='https://github.com/uburuntu/vk2tg',
