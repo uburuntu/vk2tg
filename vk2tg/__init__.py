@@ -5,7 +5,7 @@ import logging
 from telebot import TeleBot
 from vk_api import VkApi, longpoll as vk_longpoll
 
-__version__ = '0.1.1'
+__version__ = '0.1.3'
 
 log_format = '%(asctime)s [%(filename)s:%(lineno)d] [%(levelname)s] %(name)s: "%(message)s"'
 logging.basicConfig(format=log_format, level=logging.WARNING)
